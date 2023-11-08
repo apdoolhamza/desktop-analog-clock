@@ -14,7 +14,7 @@ A basic web-based desktop analog clock built with HTML, CSS, and JavaScript.
   - [Installation](#installation)
 - [Technologies Used](#technologies-used)
 - [License](#license)
-- [Authors](#author)
+- [Author](#author)
 - [Contact](#contact)
 
 ## Introduction
