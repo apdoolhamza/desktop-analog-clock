@@ -1,0 +1,261 @@
+*{
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+/*change the default user selection */
+::selection{
+color: inherit;
+}
+body{
+width: 100vw;
+height: 100vh;
+display: flex;
+text-align: center;
+font-family: arial;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+      opacity: .9;
+    background: #0e1d34e6;
+
+}
+/*clock container*/
+.clock-container{
+width: 250px;
+height:250px;
+display:flex;
+justify-content: center;
+align-items: center;
+border-radius: 40px;
+border: 2px dotted #e9ecef;
+ box-shadow: inset 0 0 4px #e9ecef;
+}
+.clock-container p:nth-child(1){
+	width: 60px;
+	height: 6px;
+	position: absolute;
+	transform: rotate(-90deg);
+	border-radius: 5px;
+	box-shadow:2rem 0 0 #e9ecef;
+	background-color: #e9ecef;
+}
+.clock-container p:nth-child(2){
+	width: 60px;
+	height: 4px;
+	position: absolute;
+	border-radius: 5px;
+	box-shadow:3rem 0 0 #e9ecef;
+	background-color: #e9ecef;
+	transform: rotate(-90deg);
+}
+.clock-container p:nth-child(3){
+	width: 60px;
+	height: 3px;
+	position: absolute;
+	border-radius: 5px;
+	box-shadow: 3.6rem 0 0 #e9ecef;
+	transform: rotate(-90deg);
+	background-color: #e9ecef;
+}
+.clock-container p:nth-child(4){
+	width: 24px;
+	height:24px;
+	border: 2px dotted #e3f4ff;
+	border-radius: 50%;
+	position: absolute;
+	box-shadow: inset 0 0 1px 20px #e9ecef;
+}
+.clock-container .clock-numbers{
+position: absolute;
+color: white;
+margin: 0;
+font-size: 15px;
+}
+.clock-container .clock-numbers h1:nth-child(1){
+margin-top: -7.2rem;
+margin-left: -20px;
+position: absolute;
+}
+.clock-container .clock-numbers h1:nth-child(1):before{
+content: '';
+width: 5px;
+height: 3px;
+border-radius: 3px;
+background-color:#e9ecef;
+display: block;
+margin-top: -7px;
+margin-left: 15px;
+position: absolute;
+transform: rotate(90deg);
+}
+.clock-container .clock-numbers h1:nth-child(2){
+margin-top: -15px;
+margin-left:95px;
+position: absolute;
+}
+.clock-container .clock-numbers h1:nth-child(2):before{
+content: '';
+width: 5px;
+height: 3px;
+border-radius: 3px;
+background-color:#e9ecef;
+display: block;
+margin-top: 14px;
+margin-left: 23px;
+position: absolute;
+}
+.clock-container .clock-numbers h1:nth-child(3){
+margin-top:85px;
+margin-left: -9px;
+position: absolute;
+}
+.clock-container .clock-numbers h1:nth-child(3):before{
+content: '';
+width: 5px;
+height: 3px;
+border-radius: 3px;
+background-color:#e9ecef;
+display: block;
+margin-top: 34px;
+margin-left:6px;
+position: absolute;
+transform: rotate(90deg);
+}
+.clock-container .clock-numbers h1:nth-child(4){
+margin-top: -15px;
+margin-left: -110px;
+position: absolute;
+}
+.clock-container .clock-numbers h1:nth-child(4):before{
+content: '';
+width: 5px;
+height: 3px;
+border-radius: 3px;
+background-color:#e9ecef;
+display: block;
+margin-top: 14px;
+margin-left: -14px;
+position: absolute;
+}
+.clock-container .clock-date{
+		width:26px;
+	height:26px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	border-radius: 4px;
+	font-size: 15px;
+	color: white;
+	background-color: transparent;
+	margin-left: 8rem;
+border: 1px dotted #e9ecef;
+ box-shadow: inset 0 0 3px #e9ecef;
+}
+/*show & hide clock setting container*/
+.setting-btn,.setting-btn-hide{
+position: absolute;
+right: 0;
+padding: 30px 10px;
+border-radius: 10px 0 0 10px;
+color: #e9ecef;
+font-size: 17px;
+cursor: pointer;
+ box-shadow: inset 0 0 4px #e9ecef;
+ z-index: 1;
+text-shadow: 0 0 .5px black;
+}
+.setting-btn:hover,.setting-btn-hide:hover,.clock-setting button:hover{
+background-color:#e9ecef;
+color: black;
+text-shadow: 0 0 1px black;
+transition: background-color .5s;
+}
+/*clock setting container*/
+.clock-setting{
+position: absolute;
+right: 0;
+width: 30%;
+height: 100vh;
+border-radius: 5px 0 0 5px;
+color: #e9ecef;
+opacity: 0;
+transition: all 2s;
+}
+/*set to currant time btn using local machine time*/
+.clock-setting button{
+background-color: transparent;
+ box-shadow: inset 0 0 4px #e9ecef;
+ bottom: 20px;
+ right: 20px;
+ width: 90%;
+ height: 45px;
+ color: #e9ecef;
+ outline: none;
+ position: absolute;
+ border-radius: 5px;
+ font-size: 15px;
+text-shadow: 0 0 1px black;
+cursor: pointer;
+}
+.clock-setting .time-set-container{
+	margin-top: 40px;
+display: flex;
+text-align: center;
+justify-content: center;
+}
+.time-set-container p{
+	padding: 12px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	display: flex;
+	line-height: 10px;
+	justify-content: center;
+	font-size: 19px;
+	text-shadow: 0 0 1.5px #e9ecef;
+ box-shadow: inset 0 0 4px #e9ecef;
+ margin: 0 10px;
+ cursor: pointer;
+}
+.time-set-container p:hover{
+	text-shadow: 0 0 1px black;
+color: black;
+ background-color: #e9ecef;
+ transition: background-color .5s;
+}
+.time-set-container span{
+font-size: 25px;
+margin: 0 7px;
+}
+.time-set-container sup{
+margin: 0 2px;
+font-size: 13px;
+font-weight: 600;
+}
+/*Pop-up container*/
+.pop-up-div{
+width: 100%;
+height: 100vh;
+display: none;
+position: fixed;
+}
+/*Pop-up container unlock btn*/
+.clock-setting .unlock-btn{
+position: absolute;
+margin-top: 11.5rem;
+padding: 20px;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+color: #e9ecef;
+font-size: 17px;
+cursor: pointer;
+ box-shadow: inset 0 0 4px #e9ecef;
+ z-index: 1;
+text-shadow: 0 0 .5px black;
+}
